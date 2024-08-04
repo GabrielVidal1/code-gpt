@@ -1,0 +1,13 @@
+venv
+.env
+logs
+
+*/**/__pycache__
+*/**/*.pyc
+*/**/*.pyo
+*/**/*.pyd
+
+.DS_Store
+
+logs
+main.llm

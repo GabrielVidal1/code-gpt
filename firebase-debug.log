@@ -1,0 +1,11 @@
+[debug] [2024-08-24T18:10:33.556Z] ----------------------------------------------------------------------
+[debug] [2024-08-24T18:10:33.558Z] Command:       /opt/homebrew/Cellar/node/21.2.0/bin/node /opt/homebrew/bin/firebase deploy --only firestore:rules
+[debug] [2024-08-24T18:10:33.558Z] CLI Version:   13.13.3
+[debug] [2024-08-24T18:10:33.558Z] Platform:      darwin
+[debug] [2024-08-24T18:10:33.558Z] Node Version:  v21.2.0
+[debug] [2024-08-24T18:10:33.558Z] Time:          Sat Aug 24 2024 20:10:33 GMT+0200 (Central European Summer Time)
+[debug] [2024-08-24T18:10:33.559Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-24T18:10:33.560Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[error] 
+[error] Error: Not in a Firebase app directory (could not locate firebase.json)

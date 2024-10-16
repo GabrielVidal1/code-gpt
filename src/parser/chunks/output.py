@@ -64,8 +64,12 @@ class OutputChunk(Chunk):
         self.content = response
 
         if not os.path.exists(self.path):
-            os.makedirs(os.path.dirname(self.path), exist_ok=True)
-            open(self.path, "w").close()
+            try:
+                os.makedirs(os.path.dirname(self.path), exist_ok=True)
+                open(self.path, "w").close()
+            except Exception as e:
+                self.error = str(e)
+                return
 
         if self.only_code:
             with open(self.path, "w") as file:

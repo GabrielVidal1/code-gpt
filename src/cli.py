@@ -38,7 +38,9 @@ def main(
 
     # Prepare the messages for the API
     try:
-        result = process_chunks(source_filename, client, chunks, prompt_debug)
+        result = process_chunks(
+            os.getcwd(), source_filename, client, chunks, prompt_debug
+        )
 
         if prompt_debug:
             os.makedirs(log_folder, exist_ok=True)

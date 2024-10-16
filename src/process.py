@@ -1,3 +1,4 @@
+import os
 from typing import List
 
 from src.clients.client import Client
@@ -5,7 +6,11 @@ from src.parser.chunks import Chunk
 
 
 def process_chunks(
-    source_file: str, client: Client, chunks: List[Chunk], prompt_debug: bool
+    work_dir: str,
+    source_file: str,
+    client: Client,
+    chunks: List[Chunk],
+    prompt_debug: bool,
 ) -> List[Chunk]:
     """
     Process the chunks in order and return the result.
@@ -18,7 +23,8 @@ def process_chunks(
         else:
             result = chunk.process(
                 **{
-                    "source_file": source_file,
+                    "work_dir": work_dir,
+                    "source_file": os.path.join(work_dir, source_file or "main.llm"),
                     "input": chunks,
                     "result": result,
                     "client": client,

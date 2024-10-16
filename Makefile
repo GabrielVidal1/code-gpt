@@ -12,3 +12,6 @@ export PYTHONPATH := $(SRC_DIR):$$PYTHONPATH
 .PHONY: tests
 tests:
 	$(PYTHON) -m unittest discover -s $(TEST_DIR)
+
+up:
+	$(PYTHON) -m fastapi_cli dev src/__init__.py --reload

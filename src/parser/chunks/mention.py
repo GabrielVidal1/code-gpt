@@ -11,8 +11,8 @@ class MentionChunk(Chunk):
     ```
     """
 
-    def __init__(self, data: str):
-        super().__init__(data, "mention")
+    def __init__(self, data: str, result=None, error=None):
+        super().__init__(data, "mention", result is not None, error)
         self.path = data[1:].split(" ")[0]
 
     def format(self, **kwargs):
